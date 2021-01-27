@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React-Resume</title>
+    <!-- React -->
+    <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">    <!-- Babel -->
+    <!-- babel -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <!-- custom-styles -->
+    <link rel="spreadsheet" href="style.css">
+</head>
+<body>
+    <!-- Bootstrap-Scripts -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <div id=root class="container">
+    </div>
+
+    <!-- script -->
+    <script type="text/babel">
+   let Root=document.getElementById("root");
+   let Line=()=><hr/>
+   let Br=()=><br/>
+   let Heading=({heading})=><h4>{heading}</h4>
+   let Names=({names})=><h1>{names}</h1>
+   let Position=({address})=><p>Undergraduate | Former Intern-Honeywell Tech Pvt Ltd.</p>
+   let Objective=()=><p>I would like to be a part of an organization Where I can gain confidence and fame using my potential in the field of “Web Development”, and express my innovative creative skills for self and company growth.</p>
+   let Exp=()=><h6><b>Web Developer Intern (Jan-July,2020) Honeywell Tech Pvt Ltd.</b> </h6>
+   let ExpDes=()=><p><ul><li>Worked with senior mentors to gain exposure about how industry proceed in the all phases of software development.</li>
+   <li>Develop project idea and workflow.</li><li>Worked along with industry experts.</li></ul></p>
+   let Certifications=({head,desc})=><p><ul><li><b>{head}</b>-{desc}</li></ul></p>
+   let Academics=({grad,clg,percent})=><ul><li><p><b>{grad}</b>-{clg}-{percent}</p></li></ul>
+   let TechnicalExperience=({name,url})=><ul><li><p><b>{name}</b>-{url}</p></li></ul>
+   let Programming=({langauge,level})=><ul><li><b>{langauge}</b>-{level}</li></ul>
+   let UGProject=()=><h4>UGFinalProject<br/><h5>User Interface for Kaldi Speech Model Generator</h5></h4>
+   let UGProjectDesc=()=><p><ul><li>Kaldi is a toolkit for speech recognition written in C++ and licensed under the Apache License v2.0. Kaldi is intended for use by speech recognition researchers.</li>
+    <li>It is a script based tool which cannot be accessed by the researcher without proir knowledge on that system.</li><li>In order to reduce their load an user interface which comunicates between between both the actions of tool as well as Human interaction is made.</li></ul></p>
+   let Highlights=({name,desc})=><p><ul><li><b>{name}</b>-{desc}</li></ul></p>
+   let Traning=()=><p><h5>Wowoni Pvt ltd</h5><ul><li>Got trained to work in banking domain.</li><li>Got the flow of the banking websites and how it is made.</li>
+   <li>Trained in the technologies of HTML,CSS,JS and python</li><li>Trained how to manage two projects at a time of different domain.</li></ul></p>
+   let Workshops=({domain,desc})=><ul><li><p><b>{domain}</b>-{desc}</p></li></ul>
+   let Ack=()=><p>Here, I have declare that the information given in the resume is correct to my knowledge and belief.</p>
+   let Regards=({name,email})=><h6>{name},<br/>{email}</h6>
+
+  
+   let Dom = () => (
+     <div>
+   <Names names="Vijay R.B."/>
+   <Position/>
+   <Line/>
+   <Heading heading="Objective"/>
+   <Objective/>
+   <Br/>
+   <Heading heading="Work Experience"/>
+   <Exp/>
+   <ExpDes/>
+   <Br/>
+   <Heading heading="Training"/>
+   <Traning/>
+   <Br/>
+   <Heading heading="Certifications"/>
+   <Certifications head="JavaScript" desc="GUVI Geek Network"/>
+   <Certifications head="Java Fundamental" desc="Oracle Academy"/>
+   <Certifications head="Python" desc="Elusiyam Academy"/>
+   <Br/>
+   <Heading heading="Academics"/>
+   <Academics grad="BE-CSE" clg="KLN COllege Of Engineering" percent="66%"/>
+   <Academics grad="Hr-Sec" clg="Velammal Matriculation Hr Sec School" percent="84%"/>
+   <Academics grad="Secondary" clg="Rose Matriculation School" percent="92%"/>
+   <Br/>
+   <Heading heading="Workshop"/>
+   <Workshops domain="Hadoop" desc="Introduction to hadoop and BigData by NIT-Trichy"/>
+   <Workshops domain="Python" desc="Introduction to OOPS using Python by KLN-Sivagangai"/>
+   <Br/>
+   <Heading heading="Programming languages"/>
+   <Programming langauge="JavaScript" level="Intermediate"/>
+   <Programming langauge="HTML" level="Intermediate"/>
+   <Programming langauge="CSS" level="Intermediate"/>
+   <Programming langauge="Java" level="Intermediate"/>
+   <Programming langauge="Python" level="Intermediate"/>
+   <Heading heading="Languages Known"/>
+   <Certifications head="Tamil" desc="Speak-Read-Write"/>
+   <Certifications head="English" desc="Speak-Read-Write"/>
+   <Certifications head="Saurastra" desc="Speak"/>
+   <Br/>
+   <UGProject/>
+   <UGProjectDesc/>
+   <Br/>
+   <Heading heading="Highlight"/>
+   <Highlights name="HCL Hackathon" desc="Participaed in the Ai Hackathon and secured position one among top 10 "/>
+   <Highlights name="Honeywell Hackathon" desc="Participated in Honeywell hackathon and secured internship oppertunity"/>
+   <Br/>
+   <Heading heading="Technical-Experiences"/>
+   <TechnicalExperience name='Github' url="https://github.com/vijaybalajirb"/>
+   <TechnicalExperience name='Netlify' url="https://app.netlify.com/teams/vijaybalajirb/overview"/>
+   <Br/>    
+   <Heading heading="Acknowledgement"/>
+   <Ack/>
+   <Br/>    
+   <Br/>
+   <Heading heading="Regards"/>
+   <Regards name="VIJAY RB" email="Vijaybalajivj@gmail.com"/>
+   </div>
+   )
+
+     ReactDOM.render(<Dom />, root);
+
+
+    
+    
+    
+    </script>
+
+</body>
+</html>
